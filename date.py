@@ -179,16 +179,35 @@ dia_corregido, mes_corregido, año_corregido = validar_fecha(dia, mes, año)
         fecha1 = datetime(2024, 4, 2)
 
         if fecha1 < fecha2:
-            print("La fecha 1 es menor que la fecha2")
+            print("La fecha 2 es mayor que la fecha1")
         elif fecha1 > fecha2:
             print("La fecha 1 es mayor que la fecha2")
 
     def __gt__(self, other) -> bool:
-        ...
+          
+        from datetime import datetime
+
+        fecha1 = datetime(2024, 4, 1)
+        fecha1 = datetime(2024, 4, 2)
+
+        if fecha1 < fecha2:
+            print("La fecha 1 es menor que la fecha2")
+        elif fecha1 > fecha2:
+            print("La fecha 2 es menor que la fecha1")
 
     def __eq__(self, other) -> bool:
-        ...
+        
+        from datetime import datetime
 
+        fecha1 = datetime(2024, 4, 1)
+        fecha1 = datetime(2024, 4, 2)
+
+        if fecha1 < fecha2:
+            print("La fecha 1 y la fecha2 no son iguales")
+        elif fecha1 > fecha2:
+            print("La fecha 1 y la fecha2 no son iguales")
+        else: 
+            print("Las fechas son iguales")
 
 
 if __name__ == "__main__":
